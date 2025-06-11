@@ -1,0 +1,415 @@
+<sdf version='1.10'>
+  <world name='empty'>
+    <physics name='default_physics' type='gz-physics'>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+    <plugin name='gz::sim::systems::Physics' filename='gz-sim-physics-system'/>
+    <plugin name='gz::sim::systems::UserCommands' filename='gz-sim-user-commands-system'/>
+    <plugin name='gz::sim::systems::SceneBroadcaster' filename='gz-sim-scene-broadcaster-system'/>
+    <plugin name='gz::sim::systems::Contact' filename='gz-sim-contact-system'/>
+    <gravity>0 0 -9.8000000000000007</gravity>
+    <magnetic_field>5.5644999999999998e-06 2.2875799999999999e-05 -4.2388400000000002e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <scene>
+      <ambient>0.400000006 0.400000006 0.400000006 1</ambient>
+      <background>0.699999988 0.699999988 0.699999988 1</background>
+      <shadows>true</shadows>
+    </scene>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco</name>
+      <pose>6.0288200378417969 0.088568799197673798 0 0 0 1.7859537554180995</pose>
+    </include>
+    <include>
+  <uri>https://fuel.gazebosim.org/1.0/openrobotics/models/Ground Plane</uri>
+</include>
+
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_0</name>
+      <pose>3.1652700901031494 -5.5066194534301758 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_1</name>
+      <pose>-3.5750772822110317 5.3510151823486245 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_2</name>
+      <pose>-4.8617089617668388 -4.1376167085772124 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_3</name>
+      <pose>-5.4178860945212843 1.4570871246485275 0 0 0 0</pose>
+    </include>
+  
+    <model name='box'>
+      <pose>-2.5329879008018135 9.4780530929952196 -19136.143955808562 -2.232686836728947e-13 -2.2728834835218583e-13 3.5469310596349455e-08</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box_0'>
+      <pose>-1.5016214945563295 9.4538202285768875 -19136.143955808562 2.2625039351463679e-13 -2.2666667190554235e-13 2.3812800677415088e-08</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_4</name>
+      <pose>-7.4235124588012695 9.233830451965332 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_5</name>
+      <pose>-4.4815776228486772 9.2876817534599301 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_6</name>
+      <pose>1.3958588610118818 9.4309375226407361 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_7</name>
+      <pose>5.0996866072735738 9.4401516761305828 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_8</name>
+      <pose>8.5426807839077377 9.3933207693035641 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_9</name>
+      <pose>9.6722049698602977 7.8395051956807329 0 0 0 1.5274299779508123</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_10</name>
+      <pose>9.6759843642895031 4.5466804498297249 0 0 0 1.6040300925911082</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_11</name>
+      <pose>9.754285833855576 1.0649204264629826 0 0 0 1.6195499277747409</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_12</name>
+      <pose>9.8357000349396912 -2.7046060562089411 0 0 0 1.5422699513502143</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_13</name>
+      <pose>9.8617571653748861 -6.2264628454088626 0 0 0 1.6094702118415909</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_14</name>
+      <pose>9.0609769863594671 -9.2617855148647124 0 0 0 0.50568000146645353</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_15</name>
+      <pose>6.3578922881653348 -9.453078255116365 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_16</name>
+      <pose>2.7618903357906728 -9.4139592238844685 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_17</name>
+      <pose>-1.0125315739757974 -9.3235285662580409 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_18</name>
+      <pose>-4.6045164890448245 -9.5483162548518159 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_19</name>
+      <pose>-8.2816864599628417 -9.6765628028255541 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_20</name>
+      <pose>-9.5540009629196412 -6.9675664942232256 0 0 0 1.6081301967414667</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_21</name>
+      <pose>-9.255223274230957 -4.3746476173400879 0.21387374401092529 0.09325079270682099 -0.090667493407865368 -1.5227299916982944</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_22</name>
+      <pose>-9.7412262993374803 -2.3659633911658271 0 0 0 0</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_23</name>
+      <pose>-9.2280197143554688 0.10859769582748413 0 0 0 1.564329977335595</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_24</name>
+      <pose>-9.7355575561523438 7.6175107955932617 0.14406900107860565 0 0 1.6200699658199686</pose>
+    </include>
+    <include>
+      <uri>file:///root/downloads/models</uri>
+      <name>shelf_aruco_25</name>
+      <pose>-9.5667247772216797 3.3654167652130127 0 0 0 1.6152599416092299</pose>
+    </include>
+    <model name='box_1'>
+      <pose>-9.3599725215122724 5.0658304934204832 0.5 0 0 0</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box_2'>
+      <pose>-2.5372769518688592 9.466685085467649 0.5 0 0 0</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <model name='box_3'>
+      <pose>-1.6177830230872372 9.3005687043651264 0.5 0 0 0</pose>
+      <link name='box_link'>
+        <inertial>
+          <inertia>
+            <ixx>0.16666</ixx>
+            <ixy>0</ixy>
+            <ixz>0</ixz>
+            <iyy>0.16666</iyy>
+            <iyz>0</iyz>
+            <izz>0.16666</izz>
+          </inertia>
+          <mass>1</mass>
+          <pose>0 0 0 0 0 0</pose>
+        </inertial>
+        <collision name='box_collision'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <surface>
+            <friction>
+              <ode/>
+            </friction>
+            <bounce/>
+            <contact/>
+          </surface>
+        </collision>
+        <visual name='box_visual'>
+          <geometry>
+            <box>
+              <size>1 1 1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.300000012 0.300000012 0.300000012 1</ambient>
+            <diffuse>0.699999988 0.699999988 0.699999988 1</diffuse>
+            <specular>1 1 1 1</specular>
+          </material>
+        </visual>
+        <pose>0 0 0 0 0 0</pose>
+        <enable_wind>false</enable_wind>
+      </link>
+      <static>false</static>
+      <self_collide>false</self_collide>
+    </model>
+    <light name='sun' type='directional'>
+      <pose>0 0 10 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1</intensity>
+      <direction>-0.5 0.10000000000000001 -0.90000000000000002</direction>
+      <diffuse>0.800000012 0.800000012 0.800000012 1</diffuse>
+      <specular>0.200000003 0.200000003 0.200000003 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <linear>0.01</linear>
+        <constant>0.90000000000000002</constant>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+  </world>
+</sdf>

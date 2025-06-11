@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <gazebo reference="left_caster_wheel_link">
+        <mu1 value="0.1" />
+        <mu2 value="0.1" />
+    </gazebo>
+
+    <gazebo reference="right_caster_wheel_link">
+        <mu1 value="0.1" />
+        <mu2 value="0.1" />
+    </gazebo>
+    
+    <gazebo>
+        <!-- Differential Drive Plugin -->
+        <plugin 
+            filename="gz-sim-diff-drive-system"
+            name="gz::sim::systems::DiffDrive">
+            <left_joint>base_bottom_left_wheel_joint</left_joint>
+            <right_joint>base_bottom_right_wheel_joint</right_joint>
+            <wheel_separation>0.45</wheel_separation>
+            <wheel_radius>0.1</wheel_radius>
+            <frame_id>odom</frame_id>
+            <child_frame_id>base_footprint</child_frame_id>
+        </plugin>
+    </gazebo>
+
+
+    <gazebo>
+        <!-- Joint State Publisher Plugin -->
+        <plugin
+            filename="gz-sim-joint-state-publisher-system"
+            name="gz::sim::systems::JointStatePublisher">
+            <joint_name>base_bottom_left_wheel_joint</joint_name>
+            <joint_name>base_bottom_right_wheel_joint</joint_name>
+        </plugin>
+    </gazebo>
+
+    <gazebo reference="lidar">
+    <sensor name="lidar_sensor" type="gpu_lidar">
+        <always_on>true</always_on>
+        <update_rate>10</update_rate>
+        <visualize>true</visualize>
+        <pose>0 0 0 0 0 0</pose>
+
+        <ray>
+            <scan>
+                <horizontal>
+                    <samples>5</samples>
+                    <resolution>1</resolution>
+                    <min_angle>-1.57</min_angle>
+                    <max_angle>1.57</max_angle>
+                </horizontal>
+            </scan>
+
+            <range>
+                <min>0.05</min>
+                <max>10.0</max>
+                <resolution>0.01</resolution>
+            </range>
+
+            <noise>
+                <type>gaussian</type>
+                <mean>0.0</mean>
+                <stddev>0.01</stddev>
+            </noise>
+        </ray>
+
+        <plugin  filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+            <topic>scan</topic>
+            <frame_id>lidar</frame_id>
+        </plugin>
+    </sensor>
+</gazebo>
+
+   
+<include>
+<uri>
+https://fuel.gazebosim.org/1.0/myoan/models/Shelf with ARUco boxes
+</uri>
+</include>
+    
+   
+
+     
+
+</robot>
